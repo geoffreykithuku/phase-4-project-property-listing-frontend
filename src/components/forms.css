@@ -1,0 +1,60 @@
+.forms {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+  min-height: 100vh;
+  opacity: calc(98%);
+  background-image: url("https://images.pexels.com/photos/101808/pexels-photo-101808.jpeg?auto=compress&cs=tinysrgb&w=600");
+}
+
+.auth-form-container,
+.login-form,
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+label {
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+input {
+  margin: 0.5rem 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+button {
+  color: #7439db;
+  border: none;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.link-btn {
+  background: none;
+  color: white;
+  text-decoration: underline;
+}
+
+/* .login-form {
+  border: 1px solid white;
+  padding: 50px;
+}
+.signup-form {
+  border: 1px solid white;
+  padding: 20px 50px;
+} */
+.auth-form-container {
+  box-shadow: rgb(0 0 0 / 8%) 0px 8px 24px;
+  padding: 2rem 5rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  opacity: calc(80%);
+  background-image: linear-gradient(79deg, #7439db, #c66fbc 48%, #f7944d);
+}
