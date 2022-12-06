@@ -1,4 +1,4 @@
-.container {
+.content {
   display: flex;
 }
 .list-left {
@@ -6,11 +6,11 @@
   margin: 10%;
   align-items: center;
 }
-.list-left h1{
-font-size: 3rem;
+.list-left h1 {
+  font-size: 3rem;
 }
 span {
-    color: var(--primary);
+  color: var(--primary);
 }
 .auth-form-container,
 .login-form,
@@ -105,4 +105,8 @@ code {
   .auth-form-container {
     margin: 5%;
   }
+ .list-left{
+  display: none;
+ }
+
 }

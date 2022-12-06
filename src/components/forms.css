@@ -18,7 +18,6 @@
   height: 400px;
 }
 
-
 .auth-form-container,
 .login-form,
 .signup-form {
@@ -104,13 +103,19 @@ code {
   box-shadow: rgb(0 0 0 / 15%) 0px 8px 24px;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   .auth-form-container {
     margin: 5%;
     width: 90%;
   }
   .login-form,
   .signup-form {
+    margin: auto;
+  }
+  .forms-left {
+    display: none;
+  }
+  .forms-right {
     margin: auto;
   }
 }

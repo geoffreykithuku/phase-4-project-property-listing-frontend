@@ -22,7 +22,7 @@ const NewProperty = () => {
     });
   }
   return (
-    <div className="container">
+    <div className="content">
       <div className="list-left">
         <h1>
           We make it easy for <span>tenants and landlords</span>
