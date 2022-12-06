@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./new-property.css";
-import "./forms.css";
+
 const NewProperty = () => {
   const [formData, setformData] = useState({
     image: "",

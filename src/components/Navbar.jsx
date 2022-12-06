@@ -24,10 +24,10 @@ const Navbar = () => {
             <NavLink to="/new">New Listing</NavLink>
           </li>
           <li>
-            <NavLink to="/forms">Sign In | Sign Out</NavLink>
+            <NavLink to="/forms">Sign In | Sign Up</NavLink>
           </li>
         </ul>
-       
+
         <div className="hamburger" onClick={handleClick}>
           {click ? (
             <FaTimes size={40} style={{ color: "#333" }} />
