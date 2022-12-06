@@ -13,8 +13,8 @@ const Navbar = () => {
     <div className="header">
       <div className="container">
         <h1>
-          <span style={{ color: "#222" }}>Best</span>
-          <span className="primary">Homes</span>
+          <span className="logo1">B-</span>
+          <span className="logo">Homes</span>
         </h1>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li>

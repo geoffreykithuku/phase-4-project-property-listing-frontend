@@ -25,7 +25,7 @@ const NewProperty = () => {
     <div className="content">
       <div className="list-left">
         <h1>
-          We make it easy for <span>tenants and landlords</span>
+          We make it easy for <span className="tenants">tenants and landlords</span>
         </h1>
         <p>List your Rental. Increase Tenancy. Get Rich.</p>
       </div>
