@@ -10,11 +10,16 @@ const Forms = () => {
   };
   return (
     <div className="forms">
-      {currentForm === "login" ? (
-        <Login onFormSwitch={toggleForm} />
-      ) : (
-        <Signup onFormSwitch={toggleForm} />
-      )}
+      <div className="forms-left">
+        <h2>I am left</h2>
+      </div>
+      <div className="forms-right">
+        {currentForm === "login" ? (
+          <Login onFormSwitch={toggleForm} />
+        ) : (
+          <Signup onFormSwitch={toggleForm} />
+        )}
+      </div>
     </div>
   );
 };
