@@ -18,13 +18,34 @@ const Navbar = () => {
         </h1>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink
+              style={({ isActive }) => ({
+                color: isActive ? "var(--primary)" : "#000",
+              })}
+              to="/"
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/new">New Listing</NavLink>
+            <NavLink
+              style={({ isActive }) => ({
+                color: isActive ? "var(--primary)" : "#000",
+              })}
+              to="/new"
+            >
+              New Listing
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/forms">Sign In | Sign Up</NavLink>
+            <NavLink
+              style={({ isActive }) => ({
+                color: isActive ? "var(--primary)" : "#000",
+              })}
+              to="/forms"
+            >
+              Sign In | Sign Up
+            </NavLink>
           </li>
         </ul>
 
