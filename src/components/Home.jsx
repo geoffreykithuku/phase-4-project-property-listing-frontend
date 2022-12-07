@@ -1,5 +1,7 @@
-import React,{Fragment} from 'react'
+import React, { Fragment } from 'react'
+
 import "./Home.css";
+import Property from './property';
 const Home = () => {
   return (
     <Fragment>
@@ -63,7 +65,8 @@ const Counter = ({ className, ...rest }) => {
 
     </div>
 
-    </section>
+      </section>
+      <Property />
 
     </Fragment>
   )
