@@ -21,6 +21,7 @@ const Signup = (props) => {
     }).then((r) => {
       if (r.ok) {
         window.alert("User created successfully");
+        
         navigate("/");
       } else {
         window.alert("Something went wrong");
