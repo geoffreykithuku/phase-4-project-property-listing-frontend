@@ -3,8 +3,15 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ user, setUser }) => {
   const [click, setClick] = useState(false);
+  function handleLogoutClick() {
+    fetch("/logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setUser(null);
+      }
+    });
+  }
 
   const handleClick = () => {
     setClick(!click);

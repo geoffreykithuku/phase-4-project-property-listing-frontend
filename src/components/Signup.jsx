@@ -7,10 +7,12 @@ const Signup = (props) => {
     password: "",
     confirm_password: "",
   });
+  
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(formData);
+    
   }
+  console.log(formData);
   function handleChange(e) {
     const { name, value } = e.target;
     setformData((prev) => {
@@ -60,6 +62,8 @@ const Signup = (props) => {
           id="confirm_password"
         />
         <button>Signup</button>
+        
+        
       </form>
       <button className="link-btn" onClick={() => props.onFormSwitch("login")}>
         Already have an account? Login here
