@@ -18,7 +18,7 @@ const Forms = () => {
         </div>
         <div className="forms-right">
           {currentForm === "login" ? (
-            <Login onFormSwitch = { toggleForm } />
+            <Login onFormSwitch={toggleForm} />
           ) : (
             <Signup onFormSwitch={toggleForm} />
           )}

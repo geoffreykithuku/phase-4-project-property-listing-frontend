@@ -3,8 +3,7 @@ import Forms from "./components/forms";
 import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import NewProperty from "./components/NewProperty";
-import Login from "./components/Login"; 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 function App() {
   const [user, setUser] = useState(null);
 
@@ -12,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar setUser={setUser} user={user} />
+      <Navbar  />
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
 
