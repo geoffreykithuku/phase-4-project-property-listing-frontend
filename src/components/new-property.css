@@ -1,4 +1,4 @@
-/* .content {
+.content {
   display: flex;
 }
 .list-left {
@@ -109,6 +109,4 @@ code {
   .list-left {
     display: none;
   }
-} */
-
-
+}
