@@ -48,10 +48,7 @@ const Login = (props) => {
           id="password"
         />
         <button>Login</button>
-        
-          {errors.map((err) => (
-            <li key={err}>{err}</li>
-          ))}
+     
         
       </form>
       <button className="link-btn" onClick={() => props.onFormSwitch("signup")}>

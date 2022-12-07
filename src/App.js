@@ -1,6 +1,6 @@
 import "./App.css";
-import Forms from "./components/pages/forms";
-import Navbar from "./components/pages/Navbar";
+import Forms from "./components/Forms";
+import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import NewProperty from "./components/NewProperty";
 import React, { useState } from "react";
