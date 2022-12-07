@@ -31,12 +31,12 @@ const Property = () => {
                 </div>
 
                 <div className="property-content">
-                    <h3>{detail.heading}</h3>
+                    <h3>location:{detail.location}</h3>
                     <div className="mark">
                       <i class="fa-solid fa-location-dot"></i>
-                       <span>{detail.span}</span>
+                       <span>Rent:{detail.rent}</span>
                     </div>
-                    <span className="amount">{detail.amount}</span>
+                    <span className="amount">Description:{detail.description}</span>
                 </div>
 
                 <div className="property-footer">
@@ -45,11 +45,9 @@ const Property = () => {
                             <span>{detail.size}</span>
                         </li>
                         <li>
-                            <img src={detail.bedImage} alt="bed" />
                             <span>{detail.bed}</span>
                         </li>
                         <li>
-                            <img src={detail.bathImage} alt="bath" />
                             <span>{detail.bath}</span>
                         </li>
                     </ul>

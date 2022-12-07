@@ -63,13 +63,12 @@
     font-family: "Poppins", sans-serif;
 }
 .mark span{
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 400;
-    color: #919191;
-    margin-left: 5px;
+    color: #5f0808;
     font-family: "Poppins", sans-serif;
 }
-.amount{
+.rent{
     display: inline-block;
     background: #00d363;
     border-radius: 30px;
