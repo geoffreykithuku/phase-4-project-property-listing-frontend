@@ -21,7 +21,7 @@ const NewProperty = () => {
       },
     }).then((r) => {
       if (r.ok) {
-        window.alert("Account created with success");
+        window.alert("Data inserted successfully");
         navigate("/");
       } else {
         window.alert("Something went wrong");

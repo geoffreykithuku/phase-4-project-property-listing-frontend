@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 
 const Signup = (props) => {
+  const navigate = useNavigate();
   const [formData, setformData] = useState({
     name: "",
     email: "",
@@ -10,6 +12,21 @@ const Signup = (props) => {
 
   function handleSubmit(e) {
     e.preventDefault();
+    fetch("http://localhost:3000/signup", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((r) => {
+      if (r.ok) {
+        window.alert("User created successfully");
+        navigate("/");
+      } else {
+        window.alert("Something went wrong");
+        r.json().then((err) => console.log(err.errors));
+      }
+    });
   }
 
   function handleChange(e) {
