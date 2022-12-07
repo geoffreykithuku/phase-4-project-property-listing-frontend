@@ -1,0 +1,112 @@
+.content {
+  display: flex;
+}
+.list-left {
+  width: 50%;
+  margin: 10%;
+  align-items: center;
+}
+.list-left h1 {
+  font-size: 3rem;
+}
+.tenants {
+
+color: var(--primary);
+}
+.auth-form-container,
+.login-form,
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  color: white;
+}
+
+label {
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+input {
+  margin: 0.5rem 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+button {
+  color: #7439db;
+  border: none;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.link-btn {
+  background: none;
+  color: white;
+  text-decoration: underline;
+}
+.auth-form-container {
+  box-shadow: rgb(0 0 0 / 50%) 0px 8px 24px;
+  padding: 2rem 5rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+  margin: 5% 10%;
+  z-index: 2;
+
+  /* opacity: calc(90%); */
+  background-image: linear-gradient(79deg, #7439db, #c66fbc 48%, #f7944d);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+  --primary: #118c4f;
+
+  --background: #f5f8ff;
+}
+
+.primary {
+  color: var(--primary);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.button:hover {
+  box-shadow: rgb(0 0 0 / 15%) 0px 8px 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .auth-form-container {
+    margin: 5%;
+  }
+  .list-left {
+    display: none;
+  }
+}
