@@ -1,17 +1,15 @@
 import "./App.css";
-import Forms from "./components/forms";
-import Navbar from "./components/Navbar";
+import Forms from "./components/pages/forms";
+import Navbar from "./components/pages/Navbar";
 import { Route, Routes } from "react-router-dom";
 import NewProperty from "./components/NewProperty";
 import React, { useState } from "react";
 function App() {
   const [user, setUser] = useState(null);
 
-  
-
   return (
     <div className="App">
-      <Navbar  />
+      <Navbar />
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
 
