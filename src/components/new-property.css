@@ -9,8 +9,9 @@
 .list-left h1 {
   font-size: 3rem;
 }
-span {
-  color: var(--primary);
+.tenants {
+
+color: var(--primary);
 }
 .auth-form-container,
 .login-form,
@@ -105,8 +106,7 @@ code {
   .auth-form-container {
     margin: 5%;
   }
- .list-left{
-  display: none;
- }
-
+  .list-left {
+    display: none;
+  }
 }
