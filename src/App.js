@@ -1,11 +1,18 @@
 import "./App.css";
-import React from "react";
+import React,{Fragment} from 'react';
 import Home from "./components/Home";
+import Property from "./components/property";
  
 function App() {
   return (
     <div className="App">
-      <Home />
+     <Fragment>
+
+
+<Home/>
+<Property/>
+
+</Fragment> 
     </div>
   );
 }

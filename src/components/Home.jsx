@@ -57,8 +57,8 @@ const Counter = ({ className, ...rest }) => {
          Illo accusamus iusto odit distinctio esse</p>
 
          <div className="link">
-            <a href="#" className="explore"> Explore </a>
-            <a href="#" className="contact"> Contact Us </a>
+            <a href="" className="explore"> Explore </a>
+            <a href="" className="contact"> Contact Us </a>
          </div>
 
     </div>
