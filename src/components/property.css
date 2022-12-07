@@ -45,6 +45,7 @@
 }
 .property-thumb img{
     width: 350px;
+    height: 250px;
     vertical-align: middle;
     transition: .3s;
 }
