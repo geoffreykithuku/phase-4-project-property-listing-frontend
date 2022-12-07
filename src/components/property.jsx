@@ -40,7 +40,7 @@ const Property = () => {
                       <h3>location:{detail.location}</h3>
                       <div className="mark">
                         <i class="fa-solid fa-location-dot"></i>
-                        <span>Rent:{detail.rent}</span>
+                        <span>Rent:{detail.price}</span>
                       </div>
                       <span className="amount">
                         Description:{detail.description}

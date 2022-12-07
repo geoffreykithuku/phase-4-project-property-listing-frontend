@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 import "./new-property.css";
 
 const NewProperty = () => {
+  const navigate = useNavigate();
   const [formData, setformData] = useState({
     image: "",
     description: "",
@@ -10,7 +12,22 @@ const NewProperty = () => {
   });
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(formData);
+
+    fetch("http://localhost:3000/properties", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((r) => {
+      if (r.ok) {
+        window.alert("Account created with success");
+        navigate("/");
+      } else {
+        window.alert("Something went wrong");
+        r.json().then((err) => console.log(err.errors));
+      }
+    });
   }
   function handleChange(e) {
     const { name, value } = e.target;
