@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import Footer from './Footer';
 
 import "./Home.css";
 import Property from './property';
@@ -67,7 +68,7 @@ const Counter = ({ className, ...rest }) => {
 
       </section>
       <Property />
-
+      <Footer />
     </Fragment>
   )
 }
