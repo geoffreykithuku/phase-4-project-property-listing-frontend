@@ -1,74 +1,63 @@
-import { Button } from "./Button";
-import { FormInput } from "./FormInput";
-import { useState } from "react";
-import { useHistory } from "react-router-dom";
 
+import React, { useState } from "react";
 
-const LoginForm = ({ setCurrentUser }) => {
-  const [ formData, setFormData ] = useState({
-    email: "",
-    password: ""
-  });
+const Login = (props) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  
 
-  const history = useHistory();
-
-  const { email, password } = formData;
-
-  const handleChange = (event) => {
-    const { email, value } = event.target;
-
-    setFormData({ ...formData, [email]: value });
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    fetch("/login", {
-      method: 'POST',
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData)
-    }).then( (resp) => {
-      if (resp.ok) {
-        resp.json().then( (user) => {
-          setCurrentUser(user);
-          history.push("/");
-        });
-      } else {
-        resp.json().then( (json) => {
-          alert(json.errors)
-        });
-      }
-    });
-  };
-
+  function handleSubmit(e) {
+    e.preventDefault();
+    // fetch("/login", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({ email, password }),
+    // }).then((r) => {
+      
+    //   if (r.ok) {
+    //     r.json().then((user) => onLogin(user));
+    //   } else {
+    //     r.json().then((err) => setErrors(err.errors));
+    //   }
+    // });
+  }
   return (
-    <SignInContainer>
-      <form className="form" onSubmit={ handleSubmit }>
-        <h1>Welcome back!</h1>
-        <span>Login to continue</span>
-        <FormInput
-        label="Email"
-        type="text"
-        required
-        onChange={ handleChange }
-        name="email"
-        value={ username }
+    <div className="auth-form-container">
+      <form className="login-form" onSubmit={handleSubmit}>
+        <label htmlFor="email">Email</label>
+        <input
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+          value={email}
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          id="email"
         />
-
-        <FormInput
-        label="Password"
-        type="password"
-        required
-        onChange={ handleChange }
-        name="password"
-        value={ password }
+        <label htmlFor="password">Password</label>
+        <input
+          value={password}
+          type="password"
+          name="password"
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+          placeholder="Enter your password"
+          id="password"
         />
-        <Button type="submit">Login</Button>
+        <button>Login</button>
+     
+        
       </form>
-    </SignInContainer>
+      <button className="link-btn" onClick={() => props.onFormSwitch("signup")}>
+        Don't have an account? Signup here
+      </button>
+    </div>
   );
 };
 
-export default LoginForm;
+export default Login;
+
