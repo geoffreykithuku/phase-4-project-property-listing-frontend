@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 // import PropertyDetail from "../data/propertyDetails";
 import "./property.css";
+import { Link } from "react-router-dom";
 
 const Property = () => {
   const [detail, setDetail] = useState([]);
@@ -12,6 +13,18 @@ const Property = () => {
   };
 
   console.log(detail);
+
+  function deleteProperty(propertyid) {
+    fetch(`http://localhost:3000/properties/${propertyid}`, {
+       method: "DELETE",
+       headers: { 'Content-Type': 'application/json'
+       }
+    })
+    .then(res => res.json())
+    .then(res => {
+       fetchData(res)
+    })
+ }
 
   useEffect(() => {
     fetchData();
@@ -48,18 +61,11 @@ const Property = () => {
                     </div>
 
                     <div className="property-footer">
-                      <ul>
-                        <li>
-                          <span>{detail.size}</span>
-                        </li>
-                        <li>
-                          <span>{detail.bed}</span>
-                        </li>
-                        <li>
-                          <span>{detail.bath}</span>
-                        </li>
-                      </ul>
+                     <span onClick={() => deleteProperty(Property.id)}>Delete</span>
                     </div>
+                      <div className="footer2">
+            <Link to={``}>See More</Link>
+          </div>
                   </div>
                 </div>
               </div>
