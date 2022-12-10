@@ -1,12 +1,31 @@
-import React, { Fragment } from 'react'
-import Footer from './Footer';
+import React, { Fragment, useState, useEffect } from "react";
+import Footer from "./Footer";
+import Login from "./Forms"
 
 import "./Home.css";
-import Property from './property';
+import Property from "./property";
 const Home = () => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    // auto-login
+    fetch("http://localhost:3000/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
+
+  if (!user) return (
+    <div>
+     
+      <Login onLogin={setUser} />
+    </div>
+  );
+      
   return (
     <Fragment>
-    {/* 
+      {/* 
  
  import CountUp from 'react-countup';
 import VisibilitySensor from "react-visibility-sensor";
@@ -51,26 +70,32 @@ const Counter = ({ className, ...rest }) => {
  
      */}
 
-    <section className="home">
+      <section className="home">
+        <div className="container">
+          <h1>
+            we construct <br /> dreams
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+            accusamus iusto odit distinctio esse
+          </p>
 
-    <div className="container">
-
-        <h1>we construct <br /> dreams</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Illo accusamus iusto odit distinctio esse</p>
-
-         <div className="link">
-            <a href="" className="explore"> Explore </a>
-            <a href="" className="contact"> Contact Us </a>
-         </div>
-
-    </div>
-
+          <div className="link">
+            <a href="" className="explore">
+              {" "}
+              Explore{" "}
+            </a>
+            <a href="" className="contact">
+              {" "}
+              Contact Us{" "}
+            </a>
+          </div>
+        </div>
       </section>
       <Property />
       <Footer />
     </Fragment>
-  )
-}
+  );
+};
 
 export default Home;

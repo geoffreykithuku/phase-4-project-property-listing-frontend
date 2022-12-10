@@ -3,24 +3,23 @@ import React, { useState } from "react";
 const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
-
+  const [user, setUser] = useState(null);
+  const [errors, setErrors] = useState([]);
   function handleSubmit(e) {
     e.preventDefault();
-    // fetch("/login", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({ email, password }),
-    // }).then((r) => {
-      
-    //   if (r.ok) {
-    //     r.json().then((user) => onLogin(user));
-    //   } else {
-    //     r.json().then((err) => setErrors(err.errors));
-    //   }
-    // });
+    fetch("http://localhost:3000/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+      } else {
+        r.json().then((err) => setErrors(err.errors));
+      }
+    });
   }
   return (
     <div className="auth-form-container">
@@ -48,8 +47,6 @@ const Login = (props) => {
           id="password"
         />
         <button>Login</button>
-     
-        
       </form>
       <button className="link-btn" onClick={() => props.onFormSwitch("signup")}>
         Don't have an account? Signup here

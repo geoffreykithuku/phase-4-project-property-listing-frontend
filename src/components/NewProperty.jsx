@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import "./new-property.css";
+import Login from "./Login";
 
 const NewProperty = () => {
   const navigate = useNavigate();
@@ -38,6 +39,25 @@ const NewProperty = () => {
       };
     });
   }
+
+  // Authorize users
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    // auto-login
+    fetch("http://localhost:3000/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
+
+  if (!user)
+    return (
+      <div>
+        <Login />
+      </div>
+    );
   return (
     <div className="content">
       <div className="list-left">
