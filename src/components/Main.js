@@ -17,7 +17,7 @@ function Main( {account, setAccount} ) {
       <Search />
       <PropertyList />
       <Service />
-      <Agent />
+      {/* <Agent /> */}
       <Footer />
       </>
    )

@@ -20,7 +20,7 @@ function Navbar( {account} ) {
 				</button>
 				                                              
 			
-				<Link className="navbar-brand aa-logo" to="/"> Villa <span>Property</span></Link>
+				<Link className="navbar-brand aa-logo" to="/"> Best <span>Homes</span></Link>
 
 			</div>
 			<div id="navbar" className="navbar-collapse collapse">

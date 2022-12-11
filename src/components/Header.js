@@ -27,10 +27,10 @@ function Header( {account, setAccount} ) {
                      <div className="aa-header-left">
                         <div className="aa-telephone-no">
                         <span className="fa fa-phone"></span>
-                        1-800-999-9999
+                        0700000000000
                         </div>
                         <div className="aa-email hidden-xs">
-                        <span className="fa fa-envelope-o"></span> agent@flatiron.com
+                        <span className="fa fa-envelope-o"></span> besthomes@gmail.com
                         </div>
                      </div>              
                   </div>
