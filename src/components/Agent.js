@@ -17,7 +17,7 @@ function Agent() {
                      <li>
                         <div className="aa-single-agents">
                         <div className="aa-agents-img">
-                           <img src="img/agents/agent-1.png" alt="agent member image" />
+                           <img src="img/agents/agent-1.png" alt="agent member" />
                         </div>
                         <div className="aa-agetns-info">
                            <h4><a href="#">Philip Smith</a></h4>
