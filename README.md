@@ -1,7 +1,7 @@
 # property listing app
-Here is a live demo of the project. 
 
-<video src='your URL here' width=180/>
+<p> Below is a live demo of the project </p>
+<video src='VID-20221212-WA0008.mp4' width=180/>
 
 # Getting Started with Create React App
 
@@ -28,4 +28,3 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
-
