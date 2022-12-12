@@ -2,8 +2,8 @@
 
 <p> Below is a live demo of the project </p>
 
-<video src='https://drive.google.com/file/d/1fjhlGEtHwyXnoIwyJCvoHHJIiqC19Jit/view' width=180/>
-https://drive.google.com/file/d/1fjhlGEtHwyXnoIwyJCvoHHJIiqC19Jit/view
+<video src='https://drive.google.com/file/d/1fjhlGEtHwyXnoIwyJCvoHHJIiqC19Jit/view' type="video/mp4" width=180/>
+
 
 # Getting Started with Create React App
 
