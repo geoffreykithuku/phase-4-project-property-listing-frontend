@@ -1,7 +1,8 @@
 # property listing app
 
 <p> Below is a live demo of the project </p>
-<video src='VID-20221212-WA0008.mp4' width=180/>
+
+<video src='./VID-20221212-WA0008.mp4' width=180/>
 
 # Getting Started with Create React App
 
