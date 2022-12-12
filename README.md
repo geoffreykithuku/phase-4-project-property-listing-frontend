@@ -8,7 +8,9 @@
   <source src="movie.ogg" type="video/ogg">
   Demo
 </video>
+<p align="center">
 <a href="https://drive.google.com/file/d/1fjhlGEtHwyXnoIwyJCvoHHJIiqC19Jit/view">Demo</a>
+</p>
 
 
 # Getting Started with Create React App
